@@ -1,6 +1,6 @@
 #First Non-Repeating Character
 li="eettcodelc"
-Output:"o"
+#Output:"o"
 
 def firstNonRepChar(li):
     res = {}
