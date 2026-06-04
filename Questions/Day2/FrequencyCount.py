@@ -1,6 +1,6 @@
 #Count frequency of characters
 i="banana"
-Output: {'b':1,'a':3,'n':2}
+#Output: {'b':1,'a':3,'n':2}
 def countfreq(i):
     res= {}
     count=0
