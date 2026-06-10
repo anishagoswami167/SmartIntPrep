@@ -1,3 +1,7 @@
+#Longest Common Prefix
+strs=["flower","flow","flight"]
+Output="fl"
+
 def longestPrefix(strs):
 
     if not strs:
@@ -12,7 +16,7 @@ def longestPrefix(strs):
 
     return strs[0]
 
-print(longestPrefix(["flower","flow","flight"]))
+print(longestPrefix(strs))
 
 
 # Approach:
