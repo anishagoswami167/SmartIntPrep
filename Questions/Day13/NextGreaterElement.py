@@ -1,4 +1,4 @@
-#Next Greater Element
+#Next Greater Element/Max right (reverse)
 nums = [2,1,2,4,3]
 Output=[4,2,4,-1,-1]
 
@@ -19,3 +19,29 @@ print(nextGreaterEle(nums))
 # | ---- | ----- |
 # | O(n) | O(n)  |
 
+
+#Reverse Order
+def nextGreaterElement(nums):
+
+    n = len(nums)
+
+    stack = []
+
+    result = [-1] * n
+
+    for i in range(n - 1, -1, -1):
+
+        while stack and stack[-1] <= nums[i]:
+            stack.pop()
+
+        if stack:
+            result[i] = stack[-1]
+
+        stack.append(nums[i])
+
+    return result
+
+
+nums = [2,1,2,4,3]
+
+print(nextGreaterElement(nums))
