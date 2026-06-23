@@ -1,19 +1,22 @@
 #Valid Anagram
-s = "listen"
-t = "silent"
-Output: True
+s = "abb"
+t = "aab"
+Output: False
 
-def anagram(s,t):
-    res={}
+def validAnagram(s,t):
+    dic={}
     if len(s)!=len(t):
         return False
-    for n in s:
-        res[n]= res.get(n,0)+1
-        # print(res)
-    for ch in t:
-        if ch not in res:
+    for i in s:
+        dic[i]=dic.get(i,0)+1
+    for i in t:
+        if i not in dic:
             return False
-        res[ch]-=1
-        print(res)
+        dic[i]-=1
+    for val in dic.values():
+
+        if val != 0:
+            return False
     return True
-print(anagram(s,t))
+print(validAnagram(s,t))
+        
