@@ -12,7 +12,7 @@ def secLarge(nums):
             lar=n
             
         
-        elif secLar<n:
+        elif secLar<n and n != lar:
             secLar=n
                 
             
